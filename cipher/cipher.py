@@ -1,8 +1,6 @@
 
 
-
 import sys
-
 
 # python3 cipher.py [StringToConvert] [spaces to shift]
 # distance from lowercase is 7
@@ -23,7 +21,7 @@ def shiftOver(stringargument, spacesToShiftInput):
 		if(65<=ord(i)<=90):
 			if(ord(i)+spacesToShiftInput>90):
 				diff = 90 - ord(i)
-				newval = diff + 65
+				newval = diff + 65 + spacesToShiftInput
 				output = output + chr(newval)
 			else:
 				output = output + chr((ord(i)+spacesToShiftInput))
@@ -32,7 +30,7 @@ def shiftOver(stringargument, spacesToShiftInput):
 		elif(97<=ord(i)<=122):
 			if(ord(i)+spacesToShiftInput>122):
 				diff = 122 - ord(i)
-				newval = diff + 97
+				newval = diff + 97 + spacesToShiftInput
 				output = output + chr(newval)
 			else:
 				output = output + chr((ord(i)+spacesToShiftInput))
